@@ -15,11 +15,11 @@ LABEL org.label-schema.vendor="Friedrich-Alexander-Universität Erlangen-Nürnbe
 
 RUN apt-get update \
  && apt-get install -y apt-transport-https ca-certificates \
-                       build-essential nasm file \
-                       clang-7 clang-tidy-7 lld-7 \
-                       clang-8 clang-tidy-8 lld-8 \
-                       clang-9 clang-tidy-9 lld-9 \
-                       clang-10 clang-tidy-10 lld-10 \
+                       build-essential nasm file clang-tidy \
+                       clang-7 lld-7 \
+                       clang-8 lld-8 \
+                       clang-9 lld-9 \
+                       clang-10 lld-10 \
                        gcc-multilib g++-multilib libc6-dev-i386 lib32stdc++6 \
  && update-alternatives --install /usr/bin/cc cc /usr/bin/clang-10 100 \
  && update-alternatives --install /usr/bin/c++ c++ /usr/bin/clang++-10 100
