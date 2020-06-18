@@ -2,6 +2,8 @@ FROM python
 
 LABEL maintainer="i4stubs@lists.cs.fau.de"
 
+ENV DEBIAN_FRONTEND noninteractive
+
 LABEL org.label-schema.schema-version="1.0"
 LABEL org.label-schema.name="stubs/cpplint"
 LABEL org.label-schema.description="Lint StuBS Source"

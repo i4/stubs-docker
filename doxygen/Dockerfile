@@ -2,6 +2,8 @@ FROM ubuntu:focal
 
 LABEL maintainer="i4stubs@lists.cs.fau.de"
 
+ENV DEBIAN_FRONTEND noninteractive
+
 LABEL org.label-schema.schema-version="1.0"
 LABEL org.label-schema.name="stubs/doxygen"
 LABEL org.label-schema.description="Generate StuBS documentation"

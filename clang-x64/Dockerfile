@@ -2,6 +2,7 @@ FROM ubuntu:focal
 
 LABEL maintainer="i4stubs@lists.cs.fau.de"
 
+ENV DEBIAN_FRONTEND noninteractive
 ENV ARCH x64
 ENV CC clang-10
 ENV CXX clang++-10
