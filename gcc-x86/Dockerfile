@@ -15,7 +15,7 @@ LABEL org.label-schema.vendor="Friedrich-Alexander-Universität Erlangen-Nürnbe
 
 RUN apt-get update \
  && apt-get install -y apt-transport-https ca-certificates \
-                       build-essential nasm \
+                       build-essential nasm file \
                        gcc-7 g++-7 lib32gcc-7-dev lib32stdc++-7-dev \
                        gcc-8 g++-8 lib32gcc-8-dev lib32stdc++-8-dev \
                        gcc-9 g++-9 lib32gcc-9-dev lib32stdc++-9-dev \

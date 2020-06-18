@@ -15,7 +15,7 @@ LABEL org.label-schema.vendor="Friedrich-Alexander-Universität Erlangen-Nürnbe
 
 RUN apt-get update \
  && apt-get install -y apt-transport-https ca-certificates \
-                       build-essential nasm \
+                       build-essential nasm file \
                        clang-7 clang-tidy-7 lld-7 \
                        clang-8 clang-tidy-8 lld-8 \
                        clang-9 clang-tidy-9 lld-9 \
