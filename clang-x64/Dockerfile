@@ -1,15 +1,15 @@
-FROM ubuntu:focal
+FROM ubuntu:hirsute
 
 LABEL maintainer="i4stubs@lists.cs.fau.de"
 
 ENV DEBIAN_FRONTEND noninteractive
 ENV ARCH x64
-ENV CC clang-10
-ENV CXX clang++-10
+ENV CC clang-11
+ENV CXX clang++-11
 
 LABEL org.label-schema.schema-version="1.0"
 LABEL org.label-schema.name="stubs/clang-x64"
-LABEL org.label-schema.description="Build x64 StuBS with LLVM/Clang (7-10)"
+LABEL org.label-schema.description="Build x64 StuBS with LLVM/Clang (11-12)"
 LABEL org.label-schema.url="https://www4.cs.fau.de/Lehre/WS/V_BS/"
 LABEL org.label-schema.vcs-url="https://github.com/i4/stubs-docker"
 LABEL org.label-schema.vendor="Friedrich-Alexander-Universität Erlangen-Nürnberg / Lehrstuhl für Informatik 4"
@@ -17,10 +17,8 @@ LABEL org.label-schema.vendor="Friedrich-Alexander-Universität Erlangen-Nürnbe
 RUN apt-get update \
  && apt-get install -y apt-transport-https ca-certificates \
                        build-essential nasm file clang-tidy \
-                       clang-7 lld-7 \
-                       clang-8 lld-8 \
-                       clang-9 lld-9 \
-                       clang-10 lld-10 \
- && update-alternatives --install /usr/bin/cc cc /usr/bin/clang-10 100 \
- && update-alternatives --install /usr/bin/c++ c++ /usr/bin/clang++-10 100
+                       clang-11 lld-11 \
+                       clang-12 lld-12 \
+ && update-alternatives --install /usr/bin/cc cc /usr/bin/clang-11 100 \
+ && update-alternatives --install /usr/bin/c++ c++ /usr/bin/clang++-11 100
 
