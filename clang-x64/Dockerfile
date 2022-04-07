@@ -1,4 +1,4 @@
-FROM ubuntu:hirsute
+FROM ubuntu:jammy
 
 LABEL maintainer="i4stubs@lists.cs.fau.de"
 
@@ -9,7 +9,7 @@ ENV CXX clang++-11
 
 LABEL org.label-schema.schema-version="1.0"
 LABEL org.label-schema.name="stubs/clang-x64"
-LABEL org.label-schema.description="Build x64 StuBS with LLVM/Clang (11-12)"
+LABEL org.label-schema.description="Build x64 StuBS with LLVM/Clang (11-14)"
 LABEL org.label-schema.url="https://www4.cs.fau.de/Lehre/WS/V_BS/"
 LABEL org.label-schema.vcs-url="https://github.com/i4/stubs-docker"
 LABEL org.label-schema.vendor="Friedrich-Alexander-Universität Erlangen-Nürnberg / Lehrstuhl für Informatik 4"
@@ -19,6 +19,8 @@ RUN apt-get update \
                        build-essential nasm file clang-tidy \
                        clang-11 lld-11 \
                        clang-12 lld-12 \
+                       clang-13 lld-13 \
+                       clang-14 lld-14 \
  && update-alternatives --install /usr/bin/cc cc /usr/bin/clang-11 100 \
  && update-alternatives --install /usr/bin/c++ c++ /usr/bin/clang++-11 100
 
