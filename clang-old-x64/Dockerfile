@@ -10,7 +10,7 @@ ENV CXX clang++-10
 LABEL org.label-schema.schema-version="1.0"
 LABEL org.label-schema.name="stubs/clang-old-x64"
 LABEL org.label-schema.description="Build x64 StuBS with LLVM/Clang (7-10)"
-LABEL org.label-schema.url="https://www4.cs.fau.de/Lehre/WS/V_BS/"
+LABEL org.label-schema.url="https://sys.cs.fau.de/lehre/ws/bs/"
 LABEL org.label-schema.vcs-url="https://github.com/i4/stubs-docker"
 LABEL org.label-schema.vendor="Friedrich-Alexander-Universität Erlangen-Nürnberg / Lehrstuhl für Informatik 4"
 
