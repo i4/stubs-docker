@@ -1,4 +1,4 @@
-FROM ubuntu:focal
+FROM debian:bookworm
 
 LABEL maintainer="i4stubs@lists.cs.fau.de"
 
